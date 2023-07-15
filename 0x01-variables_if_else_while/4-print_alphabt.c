@@ -1,7 +1,12 @@
+/*
+ * File: 4-print_alphabt.c
+ * Auth: Kairm-308
+ */
+
 #include <stdio.h>
+
 /**
- *
- *  Prints the alphabet in lowercase, except for q and e.
+ * main - Prints the alphabet in lowercase, except for q and e.
  *
  * Return: Always 0.
  */

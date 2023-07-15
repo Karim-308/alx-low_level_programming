@@ -1,17 +1,23 @@
+/*
+ * File: 5-print_numbers.c
+ * Auth: karim-308
+ */
+
 #include <stdio.h>
 
 /**
- * main - Prints alphabets in lowercase.
+ * main - Prints all single digit numbers of base 10 starting from 0.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    for (int t =0 ; t<10 ; t++)
-    {
-        printf("%d", t);
-    }
+	int num;
 
-    putchar('\n');
-    return 0;
+	for (num = 0; num < 10; num++)
+		printf("%d", num);
+
+	printf("\n");
+
+	return (0);
 }

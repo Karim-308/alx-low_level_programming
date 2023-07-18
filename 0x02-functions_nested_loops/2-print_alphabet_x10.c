@@ -8,11 +8,12 @@
 
 void print_alphabet_x10 (void)
 {
-        int i = 97;
-	int j = 1;
+        int i;
+	int j;
 
 	for (; j <= 10; j++)
-	{ 
+	{
+	i = 97;	
         for (; i <= 122; i++)
         {
                 _putchar(i);

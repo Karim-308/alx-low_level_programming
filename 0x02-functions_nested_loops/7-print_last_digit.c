@@ -6,18 +6,6 @@
  * @n: int to be checked
  *  Return: Always 0 (success)
   */
-#include <stdio.h>
-
-int print_last_digit(int n);
-
-int main()
-{
-    int x = print_last_digit(13);
-    printf("%d\n", x);
-
-    return 0;
-}
-
 int print_last_digit(int n)
 {
 	if (n == 0)

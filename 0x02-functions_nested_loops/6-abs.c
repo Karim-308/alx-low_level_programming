@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _abs - return 0 the positive of any number 
+ * _abs - return 0 the positive of any number
  *
  * @n: int to be checked
  *  Return: Always 0 (success)

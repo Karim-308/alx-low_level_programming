@@ -1,16 +1,14 @@
 #include "main.h"
 
 /**
- * print_triangle - entry point
- * owned by Karim-308
- * Description: Prints diagonals
- *@size: the size of the triangle of the right-angled triangle
+ * print_triangle - prints a right angled triangle
+ *@size: size of the triangle
  * Return: void
  */
 
 void print_triangle(int size)
 {
-	int hashes, row , spaces;
+	int row, hashes, spaces;
 
 	if (size <= 0)
 	{

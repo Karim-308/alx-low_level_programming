@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - prints __ x n 
+ * print_line - prints underscore x n 
  * @n: how many times
  *
  * Return: void

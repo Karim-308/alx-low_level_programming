@@ -2,7 +2,7 @@
 
 /**
  * print_line - prints underscore x n 
- * @n: how many times
+ * @n: times numbers
  *
  * Return: void
  */

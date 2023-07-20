@@ -3,6 +3,7 @@
 /**
  * _isdigit - check if the value is a digit or not
  * @c: contains value to be compared
+ *
  * Return: 1 (success)
  */
 

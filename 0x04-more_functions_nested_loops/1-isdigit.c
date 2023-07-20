@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * _isdigit - check if the value is a digit or not
- * @c: contains value to be compared
- *
- * Return: 1 (success)
- */
-
+* _isdigit - write a function that check for digit or not).
+* @c: value  to check
+*
+*  Return:  0 or 1
+*
+**/
 int _isdigit(int c)
 {
-	if ((c > '1' && c < '9'))
-		
+	if (c >= '0' && c <= '9')
 		return (1);
-
 	else
-
 		return (0);
 }

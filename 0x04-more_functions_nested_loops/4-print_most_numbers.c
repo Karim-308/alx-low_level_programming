@@ -1,22 +1,19 @@
 #include "main.h"
 
 /**
-*print_most_numbers - print 0 to 9  but not 2,4
-*Return: Doesn't
+*print_most_numbers - prints 013456789
+* Kairm-308
+*Return: void
 */
 
 void print_most_numbers(void)
 {
-	int c;
+	char c;
 
-	for (c = 0; c <= 9; c++)
+	for (c = '0'; c <= '9'; c++)
 	{
-
-	if ( c == 2 || c == 4 )
-			continue;
-
-	_putchar(c+'0');
-
+	if (!(c == '2' || c == '4'))
+		_putchar(c);
 	}
 	_putchar('\n');
 }

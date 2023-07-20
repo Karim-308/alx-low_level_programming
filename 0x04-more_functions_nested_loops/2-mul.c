@@ -1,5 +1,6 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
+
 /**
  * mul - restune the multiplication
  *
@@ -8,6 +9,7 @@
  *
  * return : mul
  */
+
 int mul(int a, int b)
 {
 	return ( a * b);

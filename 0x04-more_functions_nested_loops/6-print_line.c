@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_line - prints underscore x n 
+ * print_line - printing the underscores
  * @n: times numbers
  *
- * Return: void
+ * Return: nothing
  */
 
 

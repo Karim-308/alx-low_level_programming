@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * mul-restune the multiplication
+ * mul - restune the multiplication
  *
  * @a - first int
  * @b - second int

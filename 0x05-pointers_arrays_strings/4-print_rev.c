@@ -5,12 +5,11 @@
  *
  * @s: the string to be printed in reverse.
  *
+ * _strlen - count str length
+ * @s: string to b edetermined
+ *  Return: length of a string.
  */
-/**
-* _strlen - count str length
-* @s: string to b edetermined
-*  Return: length of a string.
-*/
+
 void print_rev(char *s)
 {
 	int i = 0;

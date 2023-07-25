@@ -20,8 +20,8 @@ void rev_string(char *s)
 
 	while (j > i)
 	{
-		x= s[i];
-		y= s[j];
+		x = s[i];
+		y = s[j];
 		s[i] = y;
 		s[j] = x;
 		j--;

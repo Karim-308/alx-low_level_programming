@@ -1,27 +1,20 @@
 #include "main.h"
 /**
- * _memcpy - fills memory with a constant byte
- * @dest: dest in memory
- * @src: src value
+ * _memcpy - a function to copy 
+ * @dest: dst
+ * @src: source
  * @n: number of bytes
- * Return: changed array with new value for n bytes
+ * Return: copied no of bytes changed
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-    if (dest == NULL || src == NULL) {
-        return (NULL);
-    }
+	int x = 0;
+	int i;
 
-    if (n == 0) {
-        return (dest);
-    }
-
-    char *p_dest = dest;
-    char *p_src = src;
-
-    while (n--) {
-        *p_dest++ = *p_src++;
-    }
-
-    return (dest);
+	for (i = n; x < i; x++)
+	{
+		dest[x] = src[x];
+		n--;
+	}
+	return (dest);
 }

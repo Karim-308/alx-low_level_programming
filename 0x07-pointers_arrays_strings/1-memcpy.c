@@ -9,11 +9,11 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
     if (dest == NULL || src == NULL) {
-        return NULL;
+        return (NULL);
     }
 
     if (n == 0) {
-        return dest;
+        return (dest);
     }
 
     char *p_dest = dest;
@@ -23,5 +23,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
         *p_dest++ = *p_src++;
     }
 
-    return dest;
+    return (dest);
 }

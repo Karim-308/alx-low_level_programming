@@ -15,7 +15,7 @@ int is_prime_number(int n)
 }
 
 /**
- * is_prime_recursive - checking if the prime
+ * is_prime_rec - checking if the prime
  * @n: what to be checked
  * @divisor: The current divisor to check
  *

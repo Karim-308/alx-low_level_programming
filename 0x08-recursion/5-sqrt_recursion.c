@@ -1,6 +1,15 @@
 #include "main.h"
 
 /**
+ * sqrt_rec - A function for calculating the square root recursively
+ * @n: The number to calculate the square root of
+ * @i: The current value to check
+ *
+ * Return: natural square root of n, and -1 if not
+ */
+int sqrt_rec(int n, int i);
+
+/**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: The number to calculate the square
  *

@@ -1,6 +1,15 @@
 #include "main.h"
 
 /**
+ * is_prime_rec - checking if the prime
+ * @n: what to be checked
+ * @divisor: The current divisor to check
+ *
+ * Return: 1 if it is prime, 0 if not
+ */
+int is_prime_rec(int n, int divisor);
+
+/**
  * is_prime_number - Checks if a number is prime
  * @n: what to be checked
  *

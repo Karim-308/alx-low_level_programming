@@ -13,7 +13,7 @@ int sqrt_rec(int n, int i);
  * _sqrt_recursion - returns the natural square root of a number
  * @n: The number to calculate the square
  *
- * Return: The natural square root of n, or -1 if it does not have a natural square root
+ * Return: The natural square root of n, or -1 if not
  */
 int _sqrt_recursion(int n)
 {

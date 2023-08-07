@@ -8,7 +8,7 @@
  *
  * Return: Pointer to the concatenated string on success, NULL on failure.
 */
-char	*_str_concat(char *s1, char *s2)
+char *_str_concat(char *s1, char *s2)
 {
 	char	*concat;
 	int	len1 = 0;

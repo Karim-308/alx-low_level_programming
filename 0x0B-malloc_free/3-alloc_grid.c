@@ -1,38 +1,46 @@
+#include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * alloc_grid - Allocates a 2D grid using an alternate implementation.
- * @width: Width of the grid.
- * @height: Height of the grid.
- *
- * Return: Pointer to the created grid.
+ * alloc_grid - main point
+ *@width: rows of matx
+ *@height: columns of str
+ * Return: a pointer to a 2 dimensional array of integers or null
  */
 int **alloc_grid(int width, int height)
 {
-	int **grid;
-	int size;
- 	int i, j;
+	int **matx;
+	int i;
+	int j;
+	int l;
+	int *p;
+
 	if (width <= 0 || height <= 0)
 		return (NULL);
-
-	size = width * height * sizeof(int);
-	
-	grid = malloc(size);
-	if (grid == NULL)
+	matx = (int **)malloc(height * sizeof(int *));
+	if (matx == NULL)
 		return (NULL);
-
 	for (i = 0; i < height; i++)
 	{
-		grid[i] = (int *)grid + i * width;
+		*(matx + i) = (int *)malloc(width * sizeof(int));
+		if (*(matx + i) == NULL)
+		{
+			for (i = 0; i < height; i++)
+			{
+				p = matx[i];
+				free(p);
+			}
+			free(matx);
+			return (NULL);
+		}
 	}
-
-	for (i = 0; i < height; i++)
+	for (l = 0; l < height; l++)
 	{
 		for (j = 0; j < width; j++)
 		{
-			grid[i][j] = 0;
+			matx[l][j] = 0;
 		}
 	}
-
-	return (grid);
+	return (matx);
 }

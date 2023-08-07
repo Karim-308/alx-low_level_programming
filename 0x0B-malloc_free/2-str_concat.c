@@ -24,7 +24,8 @@ char	*_str_concat(char *s1, char *s2)
 	if (concat == NULL)
 		return (NULL);
 
-	size_t i = 0, j = 0;
+	size_t i = 0;
+	size_t j = 0;
 
 	while (i < len1)
 		concat[j++] = s1[i++];

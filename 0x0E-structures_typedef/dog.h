@@ -1,3 +1,6 @@
+#ifndef DOG.H
+#define DOG.H
+
 /**
  * dog - Short description
  * @name: First member
@@ -12,3 +15,5 @@ struct dog
 	int age;
 	char* owner;
 };
+
+#endif

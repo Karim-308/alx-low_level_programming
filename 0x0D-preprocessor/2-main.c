@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include <libgen.h>
+#include <string.h>
 
 int main() {
-    char* filename = basename(__BASE_FILE__);
+    const char* filepath = __FILE__;
+    const char* filename = strrchr(filepath, '/') + 1;
     printf("%s\n", filename);
     return 0;
 }

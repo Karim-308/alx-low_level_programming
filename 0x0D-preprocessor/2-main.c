@@ -1,20 +1,13 @@
 #include <stdio.h>
-#include <string.h>
 
 /**
- * main - prints the filename without its path.
+ * main - Prints the name of the file of the program
+ *
  * Return: Always 0.
  */
 int main(void)
 {
-    char *filename = __FILE__;
-    char *last_slash = strrchr(filename, '/');
+	printf("%s\n", __FILE__);
 
-    /* If a slash is found, adjust the filename pointer to the next character */
-    if (last_slash)
-        filename = last_slash + 1;
-
-    printf("%s\n", filename);
-    return (0);
+	return (0);
 }
-

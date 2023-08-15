@@ -1,9 +1,6 @@
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-    const char* filepath = __FILE__;
-    const char* filename = strrchr(filepath, '/') + 1;
-    printf("%s\n", filename);
+    printf("%s\n", __BASE_FILE__);
     return 0;
 }

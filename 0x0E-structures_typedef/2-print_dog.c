@@ -17,7 +17,6 @@ void print_dog(struct dog *d)
 		else
 			printf("Name: (nil)\n");
 
-		/* You can't check a float against NULL. Assuming you've a valid age always */
 		printf("Age: %f\n", d->age);
 
 		if (d->owner != NULL)

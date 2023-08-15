@@ -1,41 +1,85 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <string.h>
+
+int str_length(char *s);
+char *str_clone(char *dest, char *src);
+dog_t *new_dog(char *name, float age, char *owner);
 
 /**
- * new_dog - creates a new dog
- * @name: dog's name
- * @age: dog's age
- * @owner: dog's owner
- * Return: pointer to new dog, or NULL if it fails
+ * str_length - Computes the length of a string.
+ * @s: The string in question.
+ *
+ * Return: Length of the string.
+ */
+int str_length(char *s)
+{
+	int count = 0;
+
+	while (*s++)
+		count++;
+
+	return (count);
+}
+
+/**
+ * str_clone - Duplicates the content of a string into another.
+ * @dest: Target buffer.
+ * @src: Source string.
+ *
+ * Return: Pointer to the destination string.
+ */
+char *str_clone(char *dest, char *src)
+{
+	int idx = 0;
+
+	while (src[idx])
+	{
+		dest[idx] = src[idx];
+		idx++;
+	}
+
+	dest[idx] = '\0';
+
+	return (dest);
+}
+
+/**
+ * new_dog - Generates a new dog instance.
+ * @name: Dog's name.
+ * @age: Dog's age.
+ * @owner: Dog's owner.
+ *
+ * Return: Pointer to the new dog structure.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newdog;
-	char *cpname, *cpowner;
+	dog_t *puppy;
 
-	newdog = malloc(sizeof(dog_t));
-	if (!newdog)
+	if (!name || !owner || age < 0)
 		return (NULL);
 
-	cpname = strdup(name);
-	if (!cpname)
-	{
-		free(newdog);
+	puppy = malloc(sizeof(dog_t));
+	if (!puppy)
 		return (NULL);
-	}
-	cpowner = strdup(owner);
-	if (!cpowner)
+
+	puppy->name = malloc(sizeof(char) * (str_length(name) + 1));
+	if (!(puppy->name))
 	{
-		free(cpname);
-		free(newdog);
+		free(puppy);
 		return (NULL);
 	}
 
-	newdog->name = cpname;
-	newdog->age = age;
-	newdog->owner = cpowner;
+	puppy->owner = malloc(sizeof(char) * (str_length(owner) + 1));
+	if (!(puppy->owner))
+	{
+		free(puppy->name);
+		free(puppy);
+		return (NULL);
+	}
 
-	return (newdog);
+	str_clone(puppy->name, name);
+	puppy->age = age;
+	str_clone(puppy->owner, owner);
+
+	return (puppy);
 }
-

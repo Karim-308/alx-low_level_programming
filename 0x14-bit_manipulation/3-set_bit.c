@@ -9,16 +9,15 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-    /* Use the get_bit function to check if index is within range */
-    if (get_bit(*n, index) == -1)
-        return (-1);
 
-    /* Create a number with a 1 bit only at the desired position */
-    unsigned long int mask = 1UL << index;
+	unsigned long int mask = 1UL << index;
 
-    /* OR n with the mask to set the bit at the desired position to 1 */
-    *n = *n | mask;
+	if (get_bit(*n, index) == -1)
+	return (-1);
 
-    return (1);
+
+	*n = *n | mask;
+
+	return (1);
 }
 

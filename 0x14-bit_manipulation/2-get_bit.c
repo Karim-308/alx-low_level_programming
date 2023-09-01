@@ -11,7 +11,6 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int current_index = 0;
 
-	/* Check if index is larger than the max number of bits */
 	if (index >= (sizeof(n) * 8))
 		return (-1);
 
@@ -20,11 +19,10 @@ int get_bit(unsigned long int n, unsigned int index)
 		if (current_index == index)
 			return (n % 2);
 
-		n >>= 1;  /* Right-shift n by 1 */
+		n >>= 1;
 		current_index++;
 	}
 
-	/* If n becomes 0 and we haven't reached the target index, then the bit at that index is 0 */
 	if (index == current_index)
 		return (0);
 

@@ -7,7 +7,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = 1;
-	int flag = 0; /* To handle the printing of leading zeros */
+	int flag = 0, i; /* To handle the printing of leading zeros */
 
 	/* If n is zero, just print it */
 	if (n == 0)
@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 	}
 
 	/* Start from the leftmost bit and iterate to the rightmost */
-	for (int i = (sizeof(n) * 8) - 1; i >= 0; i--)
+	for (i = (sizeof(n) * 8) - 1; i >= 0; i--)
 	{
 		if ((n & (mask << i)) != 0)
 		{

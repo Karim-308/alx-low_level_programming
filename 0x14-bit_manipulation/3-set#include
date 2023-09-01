@@ -1,7 +1,4 @@
-#include "main.h"
-
-/**
- * set_bit - Sets the value of a bit to 1 at a given index.
+et_bit - Sets the value of a bit to 1 at a given index.
  * @n: A pointer to the number.
  * @index: The index, starting from 0 of the bit you want to set.
  *
@@ -9,13 +6,14 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-
-	unsigned long int mask = 1UL << index;
-
+	/* Check if index is larger than the max number of bits */
 	if (index >= (sizeof(unsigned long int) * 8))
 		return (-1);
 
+	/* Create a mask with a 1 bit at the desired position */
+	unsigned long int mask = 1UL << index;
 
+	/* Use the OR operation to set the bit at index to 1 */
 	*n = *n | mask;
 
 	return (1);

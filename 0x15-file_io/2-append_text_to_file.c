@@ -13,23 +13,23 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	// Open the file in append mode
+	/* Open the file in append mode*/
 	fd = open(filename, O_WRONLY | O_APPEND);
 	if (fd == -1)
 		return (-1);
 
-	// If text_content is NULL, don't write anything. Just close and return.
+	/* If text_content is NULL, don't write anything. Just close and return.*/
 	if (!text_content)
 	{
 		close(fd);
 		return (1);
 	}
 
-	// Calculate length of text_content
+	/* Calculate length of text_content */
 	while (text_content[len])
 		len++;
 
-	// Append content to the file
+	/* Append content to the file*/
 	write_res = write(fd, text_content, len);
 	close(fd);
 

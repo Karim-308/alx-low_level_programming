@@ -1,14 +1,27 @@
 CC = gcc
-SRC = main.c holberton.c
-OBJ = $(patsubst %.c,%.o,$(SRC))
-NAME = holberton
+SRC = $(wildcard *.c)
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = /bin/rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
-.PHONY : all clean oclean fclean re
-all : m.h $(OBJ)
-    $(CC) $(OBJ) -o $(NAME)
-clean :
-    $(RM) *~ $(NAME)
-oclean :
-    $(RM) $(OBJ)
-fclean : clean oclean
-re : oclean all
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) $(OBJ) $(NAME) $(wildcard *~)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+.PHONY: all clean oclean fclean re
